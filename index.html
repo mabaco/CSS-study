@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+<head>
+<body class="darkBackground ">
+
+<article>
+  <div class="centeredCard" id="card">
+    <picture class="page_pic">
+      <source srcset="assets/images/illustration-sign-up-mobile.svg" media="(max-width:768px)">
+      <img class="page_img" src="assets/images/illustration-sign-up-desktop.svg"alt="abstract art of a form browser on a screen">
+    </picture>
+    <div class="container">
+      <h2 class="page_title">Stay updated! </h2>
+      <p> Join 60,000+ product managers receiving monthly updates on: </p>
+      <div class="grid-container">
+        
+          <div class="grid-item">
+            <svg  class="icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>
+          </div>
+          <div class="grid-item">
+            <p class="iconFollower"> Product discovery and building what matters</p>
+          </div>
+        
+        <div class="grid-item">
+          <svg  class="icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>
+        </div>
+        <div class="grid-item">
+          <p class="iconFollower">Measuring to ensure updates are a success</p>
+        </div>
+        
+        <div>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>
+        </div>
+        <div>
+          <p class="iconFollower"> And much more!</p>
+        </div>
+      </div>  
+      <form  class="emailForm" id="emailForm" method="get">
+        <div class="labelDiv">
+          <label class="emailLabel" for="email">Email address</label>
+          <span  class="errorMsg emailLabel" id="errorMsg" hidden> valid email required</span>
+        </div>
+        <input class="emailFormInput" type="email" id="email" name="email" autocomplete="none" placeholder="email@company.com"><br>
+        <button class="submitButton" id="emailFormSubmit" >Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+  </div>
+
+<div class="mobileHeight hide" id="confirmedMessage">
+  <div>
+    <img src="assets/images/icon-success.svg" alt="white checkmark in orange circle">
+    <h2 class="page_title">Thanks for subscribing!</h2>
+
+    <p id="successText"> </p>
+  </div>
+  <button class="submitButton" id="dismissBtn">Dismiss message</button>
+</div>
+
+  
+</article>  
+</body>
+</html>
+
+<script src="logic.js"></script>

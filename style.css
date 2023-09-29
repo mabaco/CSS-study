@@ -1,0 +1,214 @@
+:root {
+    --tomato: hsl(4, 100%, 67%);
+    --darkGray: hsl(234, 29%, 20%);
+    --charcoalGray: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+    --tomatoLight:  hsl(0, 92%, 90%);
+    --ff-base: "Roboto", sans-serif;
+
+    --fs-p: 1rem; /*16px*/
+    
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+  /* always copy start*/
+/* Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+/* always copy finish*/
+
+body{
+    --border-radius: 0.6rem;
+    --border-width: 1px;
+    --padding: 0.8rem;
+    display: grid;
+    place-content: center;
+    background-color: var(--darkGray);
+}
+
+@media screen and (max-width: 475px) {
+    body{
+
+        background-color: var(--white);
+    }
+}
+@media screen and (min-width: 768px) {
+    .mobileHeight{
+        height:initial !important;
+    }
+    #confirmedMessage{
+        max-width: 25rem;
+        border-radius: 15px;
+    }
+    .centeredCard{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .container{
+        padding:2.5rem;
+    }
+    .page_pic{
+        margin: 1.5rem;
+    }
+}
+
+.mobileHeight{
+    height: 100vh;
+}
+#dismissBtn:hover{
+    background: linear-gradient(127deg, rgb(228, 58, 112) 40%, rgb(245, 148, 30) 70%);
+    cursor:pointer;
+}
+#successText{
+    margin-bottom: 2rem;
+}
+#emailFormSubmit:hover{
+    background: linear-gradient(127deg, rgb(228, 58, 112) 40%, rgb(245, 148, 30) 70%);
+    cursor:pointer;
+}
+article{
+    background-color: var(--white);
+    border-width:1rem;
+    border-radius: 1rem;
+}
+
+.page_img{
+    width: 100%;
+    border-radius: 10px;
+    max-height: 560px;
+}
+p, label{
+    font-weight: var(--fw-regular);
+    color: var(--darkGray);
+    font-size: var(--fs-p);
+    font-family: var(--ff-base);
+}
+.page_title{
+    margin: 1.6rem 0;
+    color: var(--darkGray);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-base);
+    font-size: 2.4rem;
+}
+svg.icon{
+    --icon-size :var(--margin1rem);
+    --icon-margin:0 var(--margin1rem) 0 0;
+    margin: var(--icon-margin);
+    width: var(--icon-size);
+    display: inline;
+    height: var(--icon-size);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-bold);
+}
+.grid-container{
+    display: grid;
+    justify-content: start;
+    grid-template-columns: auto auto;
+}
+.container{
+    --margin1rem:1rem;
+    margin: var(--margin1rem);
+}
+.grid-item{
+    display:inline;
+}
+p.iconFollower{
+    display: inline-block;
+}
+.emailForm{
+    
+    display: grid;
+    margin-top: 1.5rem;
+}
+.emailLabel{
+    font-size: 0.8rem;
+    line-height: 3;
+    font-weight: var(--fw-bold);
+}
+
+.submitButton{
+    background-color: var(--darkGray);
+    color: var(--white);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    border-width: var(--border-width);
+}
+.hide{
+    display: none !important;
+}
+#confirmedMessage{
+    display: grid;
+    padding: 2rem;
+    justify-items: stretch;
+    align-items: center;
+    background-color: var(--white);
+}
+.emailFormInput{
+    border-radius: var(--border-radius);
+    border-width: var(--border-width);
+    padding: var(--padding);
+    cursor: pointer;
+}
+.error{
+    color: var(--tomato);
+    background-color: var(--tomatoLight);
+}
+.labelDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.successTitle{
+    margin-bottom: 1rem;
+}
+.errorMsg{
+    color: var(--tomato);
+}
